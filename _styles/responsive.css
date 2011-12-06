@@ -1,0 +1,42 @@
+/* 
+* Chubby Grid 0.1
+* By Scott Robbin and Naz Hamid (http://weightshift.com)
+* 
+* Derived from www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+*/
+
+/*
+* To enable on mobile devices only, uncomment 'and (max-device-width: 1000px)'
+*/
+
+/* Media Queries
+================================================== */
+
+    /* iPad portrait / Mobile landscape / Mobile portrait */
+    @media only screen and (max-width: 959px) /* and (max-device-width: 1000px) */ {
+        
+    }
+    
+    /* iPad portrait */
+    @media only screen and (min-width: 768px) and (max-width: 959px) /* and (max-device-width: 1000px) */  {
+	
+	}
+	
+	/* Mobile landscape / Mobile portrait */
+	@media only screen and (max-width: 767px) /* and (max-device-width: 1000px) */  {
+	    
+	}
+	
+	/* Mobile landscape */
+    @media only screen and (min-width: 480px) and (max-width: 767px) /* and (max-device-width: 1000px) */  {
+
+    }
+    
+    /* Mobile portrait */
+    @media only screen and (max-width: 479px) /* and (max-device-width: 1000px) */  {
+        
+    }
+    
+    

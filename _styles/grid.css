@@ -1,0 +1,437 @@
+/* 
+* Chubby Grid 0.1
+* By Scott Robbin and Naz Hamid (http://weightshift.com)
+* 
+* Derived from www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+*/
+
+/*
+* To enable on mobile devices only, uncomment 'and (max-device-width: 1000px)'
+*/
+
+/* Images
+================================================== */
+
+    /* Scale images with the grid width */
+    img.scale { max-width: 100%; height: auto; }
+
+/* Base 960 12-column grid 
+================================================== */
+
+    .container { position: relative; width: 960px; margin: 0 auto; padding: 0; }
+    .column, .columns { float: left; display: inline; margin-left: 10px; margin-right: 10px; }
+    
+    /* Clearing */
+    .container:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; } 
+
+    /* Base Grid */
+    .container .one.column                      { width: 60px;  }
+    .container .two.columns                     { width: 140px; }
+    .container .three.columns                   { width: 220px; }
+    .container .four.columns                    { width: 300px; }
+    .container .five.columns                    { width: 380px; }
+    .container .six.columns                     { width: 460px; }
+    .container .seven.columns                   { width: 540px; }	
+    .container .eight.columns                   { width: 620px; }
+    .container .nine.columns                    { width: 700px; }
+    .container .ten.columns                     { width: 780px; }	
+    .container .eleven.columns                  { width: 860px; }	
+    .container .twelve.columns                  { width: 940px; }
+
+    /* Chubby Grid */
+    .container .one.chubby.column               { width: 40px; padding-left: 10px; padding-right: 10px; }
+    .container .two.chubby.columns              { width: 120px; padding-left: 10px; padding-right: 10px; }
+    .container .three.chubby.columns            { width: 200px; padding-left: 10px; padding-right: 10px; }
+    .container .four.chubby.columns             { width: 280px; padding-left: 10px; padding-right: 10px; }
+    .container .five.chubby.columns             { width: 360px; padding-left: 10px; padding-right: 10px; }
+    .container .six.chubby.columns              { width: 440px; padding-left: 10px; padding-right: 10px; }
+    .container .seven.chubby.columns            { width: 520px; padding-left: 10px; padding-right: 10px; }	
+    .container .eight.chubby.columns            { width: 600px; padding-left: 10px; padding-right: 10px; }
+    .container .nine.chubby.columns             { width: 680px; padding-left: 10px; padding-right: 10px; }
+    .container .ten.chubby.columns              { width: 760px; padding-left: 10px; padding-right: 10px; }	
+    .container .eleven.chubby.columns           { width: 840px; padding-left: 10px; padding-right: 10px; }	
+    .container .twelve.chubby.columns           { width: 920px; padding-left: 10px; padding-right: 10px; }
+
+    /* Prefix */	
+    .container .prefix-one.column,
+    .container .prefix-one.columns              { padding-left: 80px; }
+    .container .prefix-one.chubby.column,
+    .container .prefix-one.chubby.columns       { padding-left: 90px; }
+    .container .prefix-two.column,
+    .container .prefix-two.columns              { padding-left: 160px; }
+    .container .prefix-two.chubby.column,
+    .container .prefix-two.chubby.columns       { padding-left: 170px; }
+    .container .prefix-three.column,
+    .container .prefix-three.columns            { padding-left: 240px; }
+    .container .prefix-three.chubby.column,
+    .container .prefix-three.chubby.columns     { padding-left: 250px; }
+    .container .prefix-four.column,
+    .container .prefix-four.columns             { padding-left: 320px; }
+    .container .prefix-four.chubby.column,
+    .container .prefix-four.chubby.columns      { padding-left: 330px; }
+    .container .prefix-five.column,
+    .container .prefix-five.columns             { padding-left: 400px; }
+    .container .prefix-five.chubby.column,
+    .container .prefix-five.chubby.columns      { padding-left: 410px; }
+    .container .prefix-six.column,
+    .container .prefix-six.columns              { padding-left: 480px; }
+    .container .prefix-six.chubby.column,
+    .container .prefix-six.chubby.columns       { padding-left: 490px; }
+    .container .prefix-seven.column,
+    .container .prefix-seven.columns            { padding-left: 560px; }
+    .container .prefix-seven.chubby.column,
+    .container .prefix-seven.chubby.columns     { padding-left: 570px; }
+    .container .prefix-eight.column,
+    .container .prefix-eight.columns            { padding-left: 640px; }
+    .container .prefix-eight.chubby.column,
+    .container .prefix-eight.chubby.columns     { padding-left: 650px; }
+    .container .prefix-nine.column,
+    .container .prefix-nine.columns	            { padding-left: 720px; }
+    .container .prefix-nine.chubby.column,
+    .container .prefix-nine.chubby.columns      { padding-left: 730px; }
+    .container .prefix-ten.column,
+    .container .prefix-ten.columns              { padding-left: 800px; }
+    .container .prefix-ten.chubby.column,
+    .container .prefix-ten.chubby.columns       { padding-left: 810px; }
+    .container .prefix-eleven.column,
+    .container .prefix-eleven.columns           { padding-left: 880px; }
+    .container .prefix-eleven.chubby.column,
+    .container .prefix-eleven.chubby.columns    { padding-left: 890px; }
+
+    /* Suffix */	
+    .container .suffix-one.column,
+    .container .suffix-one.columns              { padding-right: 80px; }
+    .container .suffix-one.chubby.column,
+    .container .suffix-one.chubby.columns       { padding-right: 90px; }
+    .container .suffix-two.column,
+    .container .suffix-two.columns              { padding-right: 160px; }
+    .container .suffix-two.chubby.column,
+    .container .suffix-two.chubby.columns       { padding-right: 170px; }
+    .container .suffix-three.column,
+    .container .suffix-three.columns            { padding-right: 240px; }
+    .container .suffix-three.chubby.column,
+    .container .suffix-three.chubby.columns     { padding-right: 250px; }
+    .container .suffix-four.column,
+    .container .suffix-four.columns             { padding-right: 320px; }
+    .container .suffix-four.chubby.column,
+    .container .suffix-four.chubby.columns      { padding-right: 330px; }
+    .container .suffix-five.column,
+    .container .suffix-five.columns             { padding-right: 400px; }
+    .container .suffix-five.chubby.column,
+    .container .suffix-five.chubby.columns      { padding-right: 410px; }
+    .container .suffix-six.column,
+    .container .suffix-six.columns              { padding-right: 480px; }
+    .container .suffix-six.chubby.column,
+    .container .suffix-six.chubby.columns       { padding-right: 490px; }
+    .container .suffix-seven.column,
+    .container .suffix-seven.columns            { padding-right: 560px; }
+    .container .suffix-seven.chubby.column,
+    .container .suffix-seven.chubby.columns     { padding-right: 570px; }
+    .container .suffix-eight.column,
+    .container .suffix-eight.columns            { padding-right: 640px; }
+    .container .suffix-eight.chubby.column,
+    .container .suffix-eight.chubby.columns     { padding-right: 650px; }
+    .container .suffix-nine.column,
+    .container .suffix-nine.columns             { padding-right: 720px; }
+    .container .suffix-nine.chubby.column,
+    .container .suffix-nine.chubby.columns      { padding-right: 730px; }
+    .container .suffix-ten.column,
+    .container .suffix-ten.columns              { padding-right: 800px; }
+    .container .suffix-ten.chubby.column,
+    .container .suffix-ten.chubby.columns       { padding-right: 810px; }
+    .container .suffix-eleven.column,
+    .container .suffix-eleven.columns           { padding-right: 880px; }
+    .container .suffix-eleven.chubby.column,
+    .container .suffix-eleven.chubby.columns    { padding-right: 890px; }
+
+
+/* iPad portrait
+================================================== */	
+
+@media only screen and (min-width: 768px) and (max-width: 959px) /* and (max-device-width: 1000px) */ {
+    .container { width: 768px; }
+
+    /* Base Grid */
+    .container .one.column                      { width: 44px;  }
+    .container .two.columns                     { width: 108px; }
+    .container .three.columns                   { width: 172px; }
+    .container .four.columns                    { width: 236px; }
+    .container .five.columns                    { width: 300px; }
+    .container .six.columns                     { width: 364px; }
+    .container .seven.columns                   { width: 428px; }	
+    .container .eight.columns                   { width: 492px; }
+    .container .nine.columns                    { width: 556px; }
+    .container .ten.columns                     { width: 620px; }	
+    .container .eleven.columns                  { width: 684px; }	
+    .container .twelve.columns                  { width: 748px; }
+
+    /* Chubby Grid */
+    .container .one.chubby.column               { width: 24px; padding-left: 10px; padding-right: 10px; }
+    .container .two.chubby.columns              { width: 88px; padding-left: 10px; padding-right: 10px; }
+    .container .three.chubby.columns            { width: 152px; padding-left: 10px; padding-right: 10px; }
+    .container .four.chubby.columns             { width: 216px; padding-left: 10px; padding-right: 10px; }
+    .container .five.chubby.columns             { width: 280px; padding-left: 10px; padding-right: 10px; }
+    .container .six.chubby.columns              { width: 344px; padding-left: 10px; padding-right: 10px; }
+    .container .seven.chubby.columns            { width: 408px; padding-left: 10px; padding-right: 10px; }	
+    .container .eight.chubby.columns            { width: 472px; padding-left: 10px; padding-right: 10px; }
+    .container .nine.chubby.columns             { width: 536px; padding-left: 10px; padding-right: 10px; }
+    .container .ten.chubby.columns              { width: 600px; padding-left: 10px; padding-right: 10px; }	
+    .container .eleven.chubby.columns           { width: 664px; padding-left: 10px; padding-right: 10px; }	
+    .container .twelve.chubby.columns           { width: 728px; padding-left: 10px; padding-right: 10px; }
+
+    /* Prefix */	
+    .container .prefix-one.column,
+    .container .prefix-one.columns              { padding-left: 64px; }
+    .container .prefix-one.chubby.column,
+    .container .prefix-one.chubby.columns       { padding-left: 70px; }
+    .container .prefix-two.column,
+    .container .prefix-two.columns              { padding-left: 128px; }
+    .container .prefix-two.chubby.column,
+    .container .prefix-two.chubby.columns       { padding-left: 138px; }
+    .container .prefix-three.column,
+    .container .prefix-three.columns            { padding-left: 192px; }
+    .container .prefix-three.chubby.column,
+    .container .prefix-three.chubby.columns     { padding-left: 202px; }
+    .container .prefix-four.column,
+    .container .prefix-four.columns             { padding-left: 256px; }
+    .container .prefix-four.chubby.column,
+    .container .prefix-four.chubby.columns      { padding-left: 266px; }
+    .container .prefix-five.column,
+    .container .prefix-five.columns             { padding-left: 320px; }
+    .container .prefix-five.chubby.column,
+    .container .prefix-five.chubby.columns      { padding-left: 330px; }
+    .container .prefix-six.column,
+    .container .prefix-six.columns              { padding-left: 384px; }
+    .container .prefix-six.chubby.column,
+    .container .prefix-six.chubby.columns       { padding-left: 394px; }
+    .container .prefix-seven.column,
+    .container .prefix-seven.columns            { padding-left: 448px; }
+    .container .prefix-seven.chubby.column,
+    .container .prefix-seven.chubby.columns     { padding-left: 458px; }
+    .container .prefix-eight.column,
+    .container .prefix-eight.columns            { padding-left: 512px; }
+    .container .prefix-eight.chubby.column,
+    .container .prefix-eight.chubby.columns     { padding-left: 522px; }
+    .container .prefix-nine.column,
+    .container .prefix-nine.columns             { padding-left: 556px; }
+    .container .prefix-nine.chubby.column,
+    .container .prefix-nine.chubby.columns      { padding-left: 566px; }
+    .container .prefix-ten.column,
+    .container .prefix-ten.columns              { padding-left: 640px; }
+    .container .prefix-ten.chubby.column,
+    .container .prefix-ten.chubby.columns       { padding-left: 650px; }
+    .container .prefix-eleven.column,	
+    .container .prefix-eleven.columns           { padding-left: 704px; }
+    .container .prefix-eleven.chubby.column,
+    .container .prefix-eleven.chubby.columns    { padding-left: 714px; }
+
+    /* Suffix */	
+    .container .suffix-one.column,	
+    .container .suffix-one.columns              { padding-right: 64px; }
+    .container .suffix-one.chubby.column,
+    .container .suffix-one.chubby.columns       { padding-right: 70px; }
+    .container .suffix-two.column,
+    .container .suffix-two.columns              { padding-right: 128px; }
+    .container .suffix-two.chubby.column,
+    .container .suffix-two.chubby.columns       { padding-right: 138px; }
+    .container .suffix-three.column,
+    .container .suffix-three.columns            { padding-right: 192px; }
+    .container .suffix-three.chubby.column,
+    .container .suffix-three.chubby.columns     { padding-right: 202px; }
+    .container .suffix-four.column,
+    .container .suffix-four.columns             { padding-right: 256px; }
+    .container .suffix-four.chubby.column,
+    .container .suffix-four.chubby.columns      { padding-right: 266px; }
+    .container .suffix-five.column,
+    .container .suffix-five.columns             { padding-right: 320px; }
+    .container .suffix-five.chubby.column,
+    .container .suffix-five.chubby.colums       { padding-right: 330px; }
+    .container .suffix-six.column,
+    .container .suffix-six.columns              { padding-right: 384px; }
+    .container .suffix-six.chubby.column,
+    .container .suffix-six.chubby.columns       { padding-right: 394px; }
+    .container .suffix-seven.column,
+    .container .suffix-seven.columns            { padding-right: 448px; }
+    .container .suffix-seven.chubby.column,
+    .container .suffix-seven.chubby.columns     { padding-right: 458px; }
+    .container .suffix-eight.column,
+    .container .suffix-eight.columns            { padding-right: 512px; }
+    .container .suffix-eight.chubby.column,
+    .container .suffix-eight.chubby.columns     { padding-right: 522px; }
+    .container .suffix-nine.column,
+    .container .suffix-nine.columns             { padding-right: 556px; }
+    .container .suffix-nine.chubby.column,
+    .container .suffix-nine.chubby.columns      { padding-right: 566px; }
+    .container .suffix-ten.column,
+    .container .suffix-ten.columns              { padding-right: 640px; }
+    .container .suffix-ten.chubby.column,
+    .container .suffix-ten.chubby.columns       { padding-right: 650px; }
+    .container .suffix-eleven.column,
+    .container .suffix-eleven.columns           { padding-right: 704px; }
+    .container .suffix-eleven.chubby.column,
+    .container .suffix-eleven.chubby.columns    { padding-right: 714px; }
+}
+
+
+/*	Mobile landscape and portrait
+================================================== */
+
+@media only screen and (max-width: 767px) /* and (max-device-width: 1000px) */ {
+    .container { width: 300px; }
+    .columns, .column { margin: 0; }
+
+    .container .one.column,
+    .container .two.columns,
+    .container .three.columns,
+    .container .four.columns,
+    .container .five.columns,
+    .container .six.columns,
+    .container .seven.columns,
+    .container .eight.columns,
+    .container .nine.columns,
+    .container .ten.columns,
+    .container .eleven.columns,
+    .container .twelve.columns { width: 300px; }
+
+    .container .one.chubby.column,
+    .container .two.chubby.columns,
+    .container .three.chubby.columns,
+    .container .four.chubby.columns,
+    .container .five.chubby.columns,
+    .container .six.chubby.columns,
+    .container .seven.chubby.columns,
+    .container .eight.chubby.columns,
+    .container .nine.chubby.columns,
+    .container .ten.chubby.columns,
+    .container .eleven.chubby.columns,
+    .container .twelve.chubby.columns { width: 280px; padding-left: 10px; padding-right: 10px; }
+
+    /* Prefix */	
+    .container .prefix-one.column,
+    .container .prefix-one.columns,
+    .container .prefix-one.chubby.column,
+    .container .prefix-one.chubby.columns,			
+    .container .prefix-two.column,
+    .container .prefix-two.columns,
+    .container .prefix-two.chubby.column,
+    .container .prefix-two.chubby.columns, 					
+    .container .prefix-three.column,
+    .container .prefix-three.columns, 
+    .container .prefix-three.chubby.column,
+    .container .prefix-three.chubby.columns,				
+    .container .prefix-four.column,
+    .container .prefix-four.columns, 	
+    .container .prefix-four.chubby.column,
+    .container .prefix-four.chubby.columns,				
+    .container .prefix-five.column,
+    .container .prefix-five.columns, 
+    .container .prefix-five.chubby.column,
+    .container .prefix-five.chubby.columns,					
+    .container .prefix-six.column,
+    .container .prefix-six.columns, 
+    .container .prefix-six.chubby.column,
+    .container .prefix-six.chubby.columns,					
+    .container .prefix-seven.column,
+    .container .prefix-seven.columns, 
+    .container .prefix-seven.chubby.column,
+    .container .prefix-seven.chubby.columns,				
+    .container .prefix-eight.column,
+    .container .prefix-eight.columns, 
+    .container .prefix-eight.chubby.column,
+    .container .prefix-eight.chubby.columns,				
+    .container .prefix-nine.column,
+    .container .prefix-nine.columns,
+    .container .prefix-nine.chubby.column,
+    .container .prefix-nine.chubby.columns, 					
+    .container .prefix-ten.column,
+    .container .prefix-ten.columns, 	
+    .container .prefix-ten.chubby.column,
+    .container .prefix-ten.chubby.columns,				
+    .container .prefix-eleven.column,
+    .container .prefix-eleven.columns, 	
+    .container .prefix-eleven.chubby.column,
+    .container .prefix-eleven.chubby.columns { padding-left: 0; }		
+
+    /* Suffix */	
+    .container .suffix-one.column,
+    .container .suffix-one.columns,
+    .container .suffix-one.chubby.column,
+    .container .suffix-one.chubby.columns,			
+    .container .suffix-two.column,
+    .container .suffix-two.columns,
+    .container .suffix-two.chubby.column,
+    .container .suffix-two.chubby.columns, 					
+    .container .suffix-three.column,
+    .container .suffix-three.columns, 
+    .container .suffix-three.chubby.column,
+    .container .suffix-three.chubby.columns,				
+    .container .suffix-four.column,
+    .container .suffix-four.columns, 	
+    .container .suffix-four.chubby.column,
+    .container .suffix-four.chubby.columns,				
+    .container .suffix-five.column,
+    .container .suffix-five.columns, 
+    .container .suffix-five.chubby.column,
+    .container .suffix-five.chubby.columns,					
+    .container .suffix-six.column,
+    .container .suffix-six.columns, 
+    .container .suffix-six.chubby.column,
+    .container .suffix-six.chubby.columns,					
+    .container .suffix-seven.column,
+    .container .suffix-seven.columns, 
+    .container .suffix-seven.chubby.column,
+    .container .suffix-seven.chubby.columns,				
+    .container .suffix-eight.column,
+    .container .suffix-eight.columns, 
+    .container .suffix-eight.chubby.column,
+    .container .suffix-eight.chubby.columns,				
+    .container .suffix-nine.column,
+    .container .suffix-nine.columns,
+    .container .suffix-nine.chubby.column,
+    .container .suffix-nine.chubby.columns, 					
+    .container .suffix-ten.column,
+    .container .suffix-ten.columns, 	
+    .container .suffix-ten.chubby.column,
+    .container .suffix-ten.chubby.columns,				
+    .container .suffix-eleven.column,
+    .container .suffix-eleven.columns, 	
+    .container .suffix-eleven.chubby.column,
+    .container .suffix-eleven.chubby.columns { padding-right: 0; }	
+}	 
+
+
+/* Mobile landscape only
+================================================== */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) /* and (max-device-width: 1000px) */ {
+    .container { width: 420px; }
+    .columns, .column { margin: 0; }
+
+    .container .one.column,
+    .container .two.columns,
+    .container .three.columns,
+    .container .four.columns,
+    .container .five.columns,
+    .container .six.columns,
+    .container .seven.columns,
+    .container .eight.columns,
+    .container .nine.columns,
+    .container .ten.columns,
+    .container .eleven.columns,
+    .container .twelve.columns { width: 420px; }
+
+    .container .one.chubby.column,
+    .container .two.chubby.columns,
+    .container .three.chubby.columns,
+    .container .four.chubby.columns,
+    .container .five.chubby.columns,
+    .container .six.chubby.columns,
+    .container .seven.chubby.columns,
+    .container .eight.chubby.columns,
+    .container .nine.chubby.columns,
+    .container .ten.chubby.columns,
+    .container .eleven.chubby.columns,
+    .container .twelve.chubby.columns { width: 400px; padding-left: 10px; padding-right: 10px; }
+}
